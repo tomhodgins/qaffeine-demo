@@ -1,0 +1,343 @@
+body style {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0 2em 0;
+  border-radius: 3px;
+  font-size: 12pt;
+  font-family: monospace;
+  word-break: break-word;
+  white-space: pre-wrap;
+  font-kerning: auto;
+  color: rgba(0,0,0,.7);
+  background: transparent;
+  border: 1px solid rgba(0,0,0,.3);
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+body {
+  margin: 1em;
+  font-family: sans-serif;
+}
+
+[data-button] {
+  display: block;
+  margin: 1em 0;
+}
+
+div {
+  display: inline-block;
+  border-radius: .2em;
+  padding: 1.5em;
+  color: #555;
+  font-size: 12pt;
+  line-height: 1.4;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+input,
+textarea {
+  display: block;
+  min-width: 250px;
+  border-radius: .2em;
+  margin: 1em;
+  padding: .5em;
+  color: #555;
+  font-size: 12pt;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+section {
+  height: 300px;
+  display: inline-block;
+  border: 1px dotted black;
+  padding: 1em;
+}
+
+img {
+  max-width: 50px;
+  box-shadow: rgba(0,0,0,.1) 0 .2em .5em;
+}
+
+img + img {
+  margin-left: 1em;
+}
+
+p {
+  font-size: 10pt;
+  color: #555;
+}
+
+[class*=-scroll-x] {
+  overflow-x: scroll;
+}
+
+[class*=-scroll-x] p {
+  width: 200%;
+}
+
+[class*=-scroll-y] {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+[data-drag] {
+  overflow: auto;
+}
+
+[data-drag=horizontal] {
+  resize: horizontal;
+}
+
+[data-drag=vertical] {
+  resize: vertical;
+}
+
+[data-drag=both] {
+  resize: both;
+}
+
+/* Min-width */
+@supports (--js-element('.minwidth', {minWidth: 300})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Max-width in px */
+@supports (--js-element('.maxwidth', {maxWidth: 300})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Min-height in px */
+@supports (--js-element('.minheight', {minHeight: 200})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Max-height in px */
+@supports (--js-element('.maxheight', {maxHeight: 200})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Min-characters on block elements */
+@supports (--js-element('.mincharacters', {minCharacters: 35})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Min-characters on input */
+@supports (--js-element('.mincharacters-input', {minCharacters: 35})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Min-characters on textarea */
+@supports (--js-element('.mincharacters-textarea', {minCharacters: 35})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Characters on block elements */
+@supports (--js-element('.characters', {characters: 5})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Characters on input */
+@supports (--js-element('.characters-input', {characters: 5})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Characters on textarea */
+@supports (--js-element('.characters-textarea', {characters: 5})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Max-characters */
+@supports (--js-element('.maxcharacters', {maxCharacters: 35})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Max-characters on input */
+@supports (--js-element('.maxcharacters-input', {maxCharacters: 35})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Max-characters on textarea */
+@supports (--js-element('.maxcharacters-textarea', {maxCharacters: 35})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Min-children */
+@supports (--js-element('.minchildren', {minChildren: 5})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Children */
+@supports (--js-element('.children', {children: 5})) {
+  [--self] {
+    --selector: window;
+    --events: ['load', 'resize', 'input', 'click', 'mouseup'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Max-children */
+@supports (--js-element('.maxchildren', {maxChildren: 5})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Square Orientation */
+@supports (--js-element('.square', {orientation: 'square'})) {
+  [--self] {
+    background: orchid;
+  }
+}
+
+/* Portrait Orientation */
+@supports (--js-element('.portrait', {orientation: 'portrait'})) {
+  [--self] {
+    background: darkturquoise;
+  }
+}
+
+/* Landscape Orientation */
+@supports (--js-element('.landscape', {orientation: 'landscape'})) {
+  [--self] {
+    background: greenyellow;
+  }
+}
+
+/* Min-aspect ratio */
+@supports (--js-element('.minaspectratio', {minAspectRatio: 16/9})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Max-aspect-ratio */
+@supports (--js-element('.maxaspectratio', {maxAspectRatio: 16/9})) {
+  [--self] {
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+
+/* Min-scroll-y */
+@supports (--js-element('.min-scroll-y', {minScrollY: 50})) {
+  [--self] {
+    --selector: window;
+    --events: ['load'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+@supports (--js-element('.min-scroll-y', {minScrollY: 50})) {
+  [--self] {
+    --selector: '.min-scroll-y';
+    --events: ['scroll'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+/* Max-scroll-y */
+@supports (--js-element('.max-scroll-y', {maxScrollY: 50})) {
+  [--self] {
+    --selector: window;
+    --events: ['load'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+@supports (--js-element('.max-scroll-y', {maxScrollY: 50})) {
+  [--self] {
+    --selector: '.max-scroll-y';
+    --events: ['scroll'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+/* Min-scroll-x */
+@supports (--js-element('.min-scroll-x', {minScrollX: 50})) {
+  [--self] {
+    --selector: window;
+    --events: ['load'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+@supports (--js-element('.min-scroll-x', {minScrollX: 50})) {
+  [--self] {
+    --selector: '.min-scroll-x';
+    --events: ['scroll'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+/* Max-scroll-x */
+@supports (--js-element('.max-scroll-x', {maxScrollX: 50})) {
+  [--self] {
+    --selector: window;
+    --events: ['load'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}
+@supports (--js-element('.max-scroll-x', {maxScrollX: 50})) {
+  [--self] {
+    --selector: '.max-scroll-x';
+    --events: ['scroll'];
+    background: greenyellow;
+    border-color: limegreen;
+  }
+}

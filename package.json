@@ -1,0 +1,16 @@
+{
+  "name": "qaffeine-demo",
+  "version": "1.0.0",
+  "main": "compile-stylesheet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "element-query-tests": "^1.1.0",
+    "qaffeine": "^0.1.0"
+  }
+}
