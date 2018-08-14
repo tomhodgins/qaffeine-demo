@@ -58,7 +58,7 @@ const jsincss = function (
 }
 
 // jsincss plugins
-const element = function (selector, options, stylesheet, plugins) {
+const element = function (selector, options, stylesheet) {
 
   const eq = {
     minWidth: (el, number) => number <= el.offsetWidth,
@@ -91,8 +91,6 @@ const element = function (selector, options, stylesheet, plugins) {
       }
     }
   }
-
-  plugins = {...plugins, ...eq}
 
   return Array.from(document.querySelectorAll(selector))
 

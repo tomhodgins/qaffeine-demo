@@ -1,5 +1,5 @@
 // Custom Element Query Plugin
-module.exports.element = function(selector, options, stylesheet, plugins) {
+module.exports.element = function(selector, options, stylesheet) {
 
   const eq = {
     minWidth: (el, number) => number <= el.offsetWidth,
@@ -32,8 +32,6 @@ module.exports.element = function(selector, options, stylesheet, plugins) {
       }
     }
   }
-
-  plugins = {...plugins, ...eq}
 
   return Array.from(document.querySelectorAll(selector))
 
