@@ -49,9 +49,9 @@ module.exports.element = function(selector, options, stylesheet) {
 
           return options[test] === tag[test]
 
-        } else if (plugins[test]) {
+        } else if (eq[test]) {
 
-          return plugins[test](tag, options[test])
+          return eq[test](tag, options[test])
 
         } else {
 
