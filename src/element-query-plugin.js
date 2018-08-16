@@ -1,5 +1,4 @@
-// Custom Element Query Plugin
-module.exports.element = function(selector, options, stylesheet) {
+module.exports = function(selector='', ...extra) {
 
   const eq = {
     minWidth: (el, number) => number <= el.offsetWidth,
@@ -33,6 +32,29 @@ module.exports.element = function(selector, options, stylesheet) {
     }
   }
 
+  let options = {}
+  let plugins = eq
+  let stylesheet = ''
+
+  switch (extra.length) {
+
+    case 3:
+      options = extra[0]
+      plugins = {...extra[1], ...plugins}
+      stylesheet = extra[2]
+    break
+
+    case 2:
+      options = extra[0]
+      stylesheet = extra[1]
+    break
+
+    case 1:
+      stylesheet = extra[0]
+    break
+
+  }
+
   return Array.from(document.querySelectorAll(selector))
 
     .reduce((styles, tag, count) => {
@@ -49,9 +71,9 @@ module.exports.element = function(selector, options, stylesheet) {
 
           return options[test] === tag[test]
 
-        } else if (eq[test]) {
+        } else if (plugins[test]) {
 
-          return eq[test](tag, options[test])
+          return plugins[test](tag, options[test])
 
         } else {
 

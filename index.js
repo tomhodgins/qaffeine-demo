@@ -1,5 +1,5 @@
 const qaffeine = require('qaffeine')
-const {element} = require('./src/element-query-plugin.js')
+const element = require('./src/element-query-plugin.js')
 
 qaffeine(
   {
