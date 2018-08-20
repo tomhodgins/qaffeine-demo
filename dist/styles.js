@@ -102,7 +102,7 @@ customAtRule.element = function (selector='', ...extra) {
 
     case 3:
       options = extra[0]
-      plugins = {...extra[1], ...plugins}
+      plugins = Object.assign(extra[1], plugins)
       stylesheet = extra[2]
     break
 
@@ -208,7 +208,7 @@ customStyleRule.element = function (selector='', ...extra) {
 
     case 3:
       options = extra[0]
-      plugins = {...extra[1], ...plugins}
+      plugins = Object.assign(extra[1], plugins)
       rule = extra[2]
     break
 
