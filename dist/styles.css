@@ -2,9 +2,9 @@ body style { display: block; width: 100%; padding: 1em; margin: 1em 0px 2em; bor
 * { box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-kerning: auto; }
 body { margin: 1em; font-family: sans-serif; }
 [data-button] { display: block; margin: 1em 0px; }
-div { display: inline-block; border-radius: 0.2em; padding: 1.5em; color: rgb(85, 85, 85); font-size: 12pt; line-height: 1.4; background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); }
-input, textarea { display: block; min-width: 250px; border-radius: 0.2em; margin: 1em; padding: 0.5em; color: rgb(85, 85, 85); font-size: 12pt; background: white; border: 1px solid rgb(204, 204, 204); }
-section { height: 300px; display: inline-block; border: 1px dotted black; padding: 1em; }
+div { display: inline-block; border-radius: 0.2em; padding: 1.5em; color: rgb(85, 85, 85); font-size: 12pt; line-height: 1.4; background: rgb(238, 238, 238); border: 4px solid rgb(204, 204, 204); }
+input, textarea { display: block; min-width: 250px; border-radius: 0.2em; margin: 1em; padding: 0.5em; color: rgb(85, 85, 85); font-size: 12pt; background: white; border: 4px solid rgb(204, 204, 204); }
+section { height: 300px; display: inline-block; border: 4px dotted lightskyblue; padding: 1em; }
 img { max-width: 50px; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.2em 0.5em; }
 img + img { margin-left: 1em; }
 p { font-size: 10pt; color: rgb(85, 85, 85); }

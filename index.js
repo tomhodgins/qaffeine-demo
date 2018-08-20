@@ -1,12 +1,15 @@
 const qaffeine = require('qaffeine')
-const element = require('./src/element-query-plugin.js')
+const eqAtRule = require('./src/element-query-at-rule.js')
+const eqSelector = require('./src/element-query-selector.js')
 
 qaffeine(
   {
     stylesheet: {
-      element
+      element: eqAtRule
     },
-    rule: {}
+    rule: {
+      element: eqSelector
+    }
   },
   'src/stylesheet.css',
   'dist/styles.js',

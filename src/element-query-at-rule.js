@@ -6,7 +6,7 @@ module.exports = function(selector='', ...extra) {
     minHeight: (el, number) => number <= el.offsetHeight,
     maxHeight: (el, number) => number >= el.offsetHeight,
     minChildren: (el, number) => number <= el.children.length,
-    children: (el, number) => number === el.children.length,
+    totalChildren: (el, number) => number === el.children.length,
     maxChildren: (el, number) => number >= el.children.length,
     minCharacters: (el, number) => number <= (
       (el.value && el.value.length) || el.textContent.length
@@ -83,16 +83,16 @@ module.exports = function(selector='', ...extra) {
 
       })) {
 
-        tag.setAttribute(`data-element-${attr}`, count)
+        tag.setAttribute(`data-element-atRule-${attr}`, count)
         styles += stylesheet.replace(
           /:self|\$this|\[--self\]/g,
-          `${selector}[data-element-${attr}="${count}"]`
+          `${selector}[data-element-atRule-${attr}="${count}"]`
         )
         count++
 
       } else {
 
-        tag.setAttribute(`data-element-${attr}`, '')
+        tag.setAttribute(`data-element-atRule-${attr}`, '')
 
       }
 
