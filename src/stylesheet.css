@@ -107,7 +107,7 @@ p {
 }
 
 /* Min-width */
-.minwidth[--js-element="({minWidth: 300})"] {
+.minwidth[--js-element="{minWidth: 300}"] {
   border-color: limegreen;
 }
 
@@ -118,7 +118,7 @@ p {
 }
 
 /* Max-width */
-.maxwidth[--js-element="({maxWidth: 300})"] {
+.maxwidth[--js-element="{maxWidth: 300}"] {
   border-color: limegreen;
 }
 
@@ -129,7 +129,7 @@ p {
 }
 
 /* Min-height */
-.minheight[--js-element="({minHeight: 200})"] {
+.minheight[--js-element="{minHeight: 200}"] {
   border-color: limegreen;
 }
 
@@ -140,7 +140,7 @@ p {
 }
 
 /* Max-height */
-.maxheight[--js-element="({maxHeight: 200})"] {
+.maxheight[--js-element="{maxHeight: 200}"] {
   border-color: limegreen;
 }
 
@@ -151,7 +151,7 @@ p {
 }
 
 /* Min-characters on block elements */
-.mincharacters[--js-element="({minCharacters: 35})"] {
+.mincharacters[--js-element="{minCharacters: 35}"] {
   border-color: limegreen;
 }
 
@@ -162,7 +162,7 @@ p {
 }
 
 /* Min-characters on input */
-.mincharacters-input[--js-element="({minCharacters: 35})"] {
+.mincharacters-input[--js-element="{minCharacters: 35}"] {
   border-color: limegreen;
 }
 
@@ -173,7 +173,7 @@ p {
 }
 
 /* Min-characters on textarea */
-.mincharacters-textarea[--js-element="({minCharacters: 35})"] {
+.mincharacters-textarea[--js-element="{minCharacters: 35}"] {
   border-color: limegreen;
 }
 
@@ -184,7 +184,7 @@ p {
 }
 
 /* Characters on block elements */
-.characters[--js-element="({characters: 5})"] {
+.characters[--js-element="{characters: 5}"] {
   border-color: limegreen;
 }
 
@@ -195,7 +195,7 @@ p {
 }
 
 /* Characters on input */
-.characters-input[--js-element="({characters: 5})"] {
+.characters-input[--js-element="{characters: 5}"] {
   border-color: limegreen;
 }
 
@@ -206,7 +206,7 @@ p {
 }
 
 /* Characters on textarea */
-.characters-textarea[--js-element="({characters: 5})"] {
+.characters-textarea[--js-element="{characters: 5}"] {
   border-color: limegreen;
 }
 
@@ -217,7 +217,7 @@ p {
 }
 
 /* Max-characters */
-.maxcharacters[--js-element="({maxCharacters: 35})"] {
+.maxcharacters[--js-element="{maxCharacters: 35}"] {
   border-color: limegreen;
 }
 
@@ -228,7 +228,7 @@ p {
 }
 
 /* Max-characters on input */
-.maxcharacters-input[--js-element="({maxCharacters: 35})"] {
+.maxcharacters-input[--js-element="{maxCharacters: 35}"] {
   border-color: limegreen;
 }
 
@@ -239,7 +239,7 @@ p {
 }
 
 /* Max-characters on textarea */
-.maxcharacters-textarea[--js-element="({maxCharacters: 35})"] {
+.maxcharacters-textarea[--js-element="{maxCharacters: 35}"] {
   border-color: limegreen;
 }
 
@@ -250,7 +250,7 @@ p {
 }
 
 /* Min-children */
-.minchildren[--js-element="({minChildren: 5})"] {
+.minchildren[--js-element="{minChildren: 5}"] {
   border-color: limegreen;
 }
 
@@ -261,7 +261,7 @@ p {
 }
 
 /* Children */
-.children[--js-element="({totalChildren: 5})"] {
+.children[--js-element="{totalChildren: 5}"] {
   border-color: limegreen;
 }
 
@@ -276,7 +276,7 @@ p {
 }
 
 /* Max-children */
-.maxchildren[--js-element="({maxChildren: 5})"] {
+.maxchildren[--js-element="{maxChildren: 5}"] {
   border-color: limegreen;
 }
 
@@ -287,13 +287,13 @@ p {
 }
 
 /* Min-scroll-y */
-.min-scroll-y[--js-element="({minScrollY: 50})"] {
+.min-scroll-y[--js-element="{minScrollY: 50}"] {
   --selector: window;
   --events: ['load'];
   border-color: limegreen;
 }
 
-.min-scroll-y[--js-element="({minScrollY: 50})"] {
+.min-scroll-y[--js-element="{minScrollY: 50}"] {
   --selector: '.min-scroll-y';
   --events: ['scroll'];
   border-color: limegreen;
@@ -320,13 +320,13 @@ p {
 }
 
 /* Max-scroll-y */
-.max-scroll-y[--js-element="({maxScrollY: 50})"] {
+.max-scroll-y[--js-element="{maxScrollY: 50}"] {
   --selector: window;
   --events: ['load'];
   border-color: limegreen;
 }
 
-.max-scroll-y[--js-element="({maxScrollY: 50})"] {
+.max-scroll-y[--js-element="{maxScrollY: 50}"] {
   --selector: '.max-scroll-y';
   --events: ['scroll'];
   border-color: limegreen;
@@ -353,13 +353,13 @@ p {
 }
 
 /* Min-scroll-x */
-.min-scroll-x[--js-element="({minScrollX: 50})"] {
+.min-scroll-x[--js-element="{minScrollX: 50}"] {
   --selector: window;
   --events: ['load'];
   border-color: limegreen;
 }
 
-.min-scroll-x[--js-element="({minScrollX: 50})"] {
+.min-scroll-x[--js-element="{minScrollX: 50}"] {
   --selector: '.min-scroll-x';
   --events: ['scroll'];
   border-color: limegreen;
@@ -386,13 +386,13 @@ p {
 }
 
 /* Max-scroll-x */
-.max-scroll-x[--js-element="({maxScrollX: 50})"] {
+.max-scroll-x[--js-element="{maxScrollX: 50}"] {
   --selector: window;
   --events: ['load'];
   border-color: limegreen;
 }
 
-.max-scroll-x[--js-element="({maxScrollX: 50})"] {
+.max-scroll-x[--js-element="{maxScrollX: 50}"] {
   --selector: '.max-scroll-x';
   --events: ['scroll'];
   border-color: limegreen;
@@ -419,7 +419,7 @@ p {
 }
 
 /* Square Orientation */
-.square[--js-element="({orientation: 'square'})"] {
+.square[--js-element="{orientation: 'square'}"] {
   border-color: darkorchid;
 }
 
@@ -430,7 +430,7 @@ p {
 }
 
 /* Portrait Orientation */
-.portrait[--js-element="({orientation: 'portrait'})"] {
+.portrait[--js-element="{orientation: 'portrait'}"] {
   border-color: teal;
 }
 
@@ -441,7 +441,7 @@ p {
 }
 
 /* Landscape Orientation */
-.landscape[--js-element="({orientation: 'landscape'})"] {
+.landscape[--js-element="{orientation: 'landscape'}"] {
   border-color: limegreen;
 }
 
@@ -452,7 +452,7 @@ p {
 }
 
 /* Min-aspect ratio */
-.minaspectratio[--js-element="({minAspectRatio: 16/9})"] {
+.minaspectratio[--js-element="{minAspectRatio: 16/9}"] {
   border-color: limegreen;
 }
 
@@ -463,7 +463,7 @@ p {
 }
 
 /* Max-aspect-ratio */
-.maxaspectratio[--js-element="({maxAspectRatio: 16/9})"] {
+.maxaspectratio[--js-element="{maxAspectRatio: 16/9}"] {
   border-color: limegreen;
 }
 
