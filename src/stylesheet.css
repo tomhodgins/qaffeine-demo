@@ -111,7 +111,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.minwidth', {minWidth: 300})) {
+@supports --js-element('.minwidth', {minWidth: 300}) {
   [--self] {
     background: greenyellow;
   }
@@ -122,7 +122,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.maxwidth', {maxWidth: 300})) {
+@supports --js-element('.maxwidth', {maxWidth: 300}) {
   [--self] {
     background: greenyellow;
   }
@@ -133,7 +133,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.minheight', {minHeight: 200})) {
+@supports --js-element('.minheight', {minHeight: 200}) {
   [--self] {
     background: greenyellow;
   }
@@ -144,7 +144,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.maxheight', {maxHeight: 200})) {
+@supports --js-element('.maxheight', {maxHeight: 200}) {
   [--self] {
     background: greenyellow;
   }
@@ -155,7 +155,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.mincharacters', {minCharacters: 35})) {
+@supports --js-element('.mincharacters', {minCharacters: 35}) {
   [--self] {
     background: greenyellow;
   }
@@ -166,7 +166,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.mincharacters-input', {minCharacters: 35})) {
+@supports --js-element('.mincharacters-input', {minCharacters: 35}) {
   [--self] {
     background: greenyellow;
   }
@@ -177,7 +177,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.mincharacters-textarea', {minCharacters: 35})) {
+@supports --js-element('.mincharacters-textarea', {minCharacters: 35}) {
   [--self] {
     background: greenyellow;
   }
@@ -188,7 +188,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.characters', {characters: 5})) {
+@supports --js-element('.characters', {characters: 5}) {
   [--self] {
     background: greenyellow;
   }
@@ -199,7 +199,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.characters-input', {characters: 5})) {
+@supports --js-element('.characters-input', {characters: 5}) {
   [--self] {
     background: greenyellow;
   }
@@ -210,7 +210,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.characters-textarea', {characters: 5})) {
+@supports --js-element('.characters-textarea', {characters: 5}) {
   [--self] {
     background: greenyellow;
   }
@@ -221,7 +221,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.maxcharacters', {maxCharacters: 35})) {
+@supports --js-element('.maxcharacters', {maxCharacters: 35}) {
   [--self] {
     background: greenyellow;
   }
@@ -232,7 +232,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.maxcharacters-input', {maxCharacters: 35})) {
+@supports --js-element('.maxcharacters-input', {maxCharacters: 35}) {
   [--self] {
     background: greenyellow;
   }
@@ -243,7 +243,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.maxcharacters-textarea', {maxCharacters: 35})) {
+@supports --js-element('.maxcharacters-textarea', {maxCharacters: 35}) {
   [--self] {
     background: greenyellow;
   }
@@ -254,7 +254,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.minchildren', {minChildren: 5})) {
+@supports --js-element('.minchildren', {minChildren: 5}) {
   [--self] {
     background: greenyellow;
   }
@@ -265,10 +265,12 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.children', {totalChildren: 5})) {
-  [--self] {
+@supports --js-element('.children', {totalChildren: 5}) {
+  [--options] {
     --selector: window;
     --events: ['load', 'resize', 'input', 'click', 'mouseup'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
@@ -278,7 +280,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.maxchildren', {maxChildren: 5})) {
+@supports --js-element('.maxchildren', {maxChildren: 5}) {
   [--self] {
     background: greenyellow;
   }
@@ -297,18 +299,22 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.min-scroll-y', {minScrollY: 50})) {
-  [--self] {
+@supports --js-element('.min-scroll-y', {minScrollY: 50}) {
+  [--options]{
     --selector: window;
     --events: ['load'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
 
-@supports (--js-element('.min-scroll-y', {minScrollY: 50})) {
-  [--self] {
+@supports --js-element('.min-scroll-y', {minScrollY: 50}) {
+  [--options] {
     --selector: '.min-scroll-y';
     --events: ['scroll'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
@@ -326,18 +332,22 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.max-scroll-y', {maxScrollY: 50})) {
-  [--self] {
+@supports --js-element('.max-scroll-y', {maxScrollY: 50}) {
+  [--options] {
     --selector: window;
     --events: ['load'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
 
-@supports (--js-element('.max-scroll-y', {maxScrollY: 50})) {
-  [--self] {
+@supports --js-element('.max-scroll-y', {maxScrollY: 50}) {
+  [--options] {
     --selector: '.max-scroll-y';
     --events: ['scroll'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
@@ -355,18 +365,22 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.min-scroll-x', {minScrollX: 50})) {
-  [--self] {
+@supports --js-element('.min-scroll-x', {minScrollX: 50}) {
+  [--options] {
     --selector: window;
     --events: ['load'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
 
-@supports (--js-element('.min-scroll-x', {minScrollX: 50})) {
-  [--self] {
+@supports --js-element('.min-scroll-x', {minScrollX: 50}) {
+  [--options] {
     --selector: '.min-scroll-x';
     --events: ['scroll'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
@@ -384,18 +398,22 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.max-scroll-x', {maxScrollX: 50})) {
-  [--self] {
+@supports --js-element('.max-scroll-x', {maxScrollX: 50}) {
+  [--options] {
     --selector: window;
     --events: ['load'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
 
-@supports (--js-element('.max-scroll-x', {maxScrollX: 50})) {
-  [--self] {
+@supports --js-element('.max-scroll-x', {maxScrollX: 50}) {
+  [--options] {
     --selector: '.max-scroll-x';
     --events: ['scroll'];
+  }
+  [--self] {
     background: greenyellow;
   }
 }
@@ -405,7 +423,7 @@ p {
   border-color: darkorchid;
 }
 
-@supports (--js-element('.square', {orientation: 'square'})) {
+@supports --js-element('.square', {orientation: 'square'}) {
   [--self] {
     background: orchid;
   }
@@ -416,7 +434,7 @@ p {
   border-color: teal;
 }
 
-@supports (--js-element('.portrait', {orientation: 'portrait'})) {
+@supports --js-element('.portrait', {orientation: 'portrait'}) {
   [--self] {
     background: darkturquoise;
   }
@@ -427,7 +445,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.landscape', {orientation: 'landscape'})) {
+@supports --js-element('.landscape', {orientation: 'landscape'}) {
   [--self] {
     background: greenyellow;
   }
@@ -438,7 +456,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.minaspectratio', {minAspectRatio: 16/9})) {
+@supports --js-element('.minaspectratio', {minAspectRatio: 16/9}) {
   [--self] {
     background: greenyellow;
   }
@@ -449,7 +467,7 @@ p {
   border-color: limegreen;
 }
 
-@supports (--js-element('.maxaspectratio', {maxAspectRatio: 16/9})) {
+@supports --js-element('.maxaspectratio', {maxAspectRatio: 16/9}) {
   [--self] {
     background: greenyellow;
   }
