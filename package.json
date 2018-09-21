@@ -11,6 +11,6 @@
   "description": "",
   "dependencies": {
     "element-query-tests": "^1.1.0",
-    "qaffeine": "^0.3.0"
+    "qaffeine": "^0.3.1"
   }
 }
