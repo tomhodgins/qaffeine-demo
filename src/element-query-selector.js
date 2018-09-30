@@ -96,9 +96,6 @@ module.exports = function(selector='', ...extra) {
         // Add CSS rule to output, adding selector for the current tag
         styles += `${selector}[data-element-selector-${attr}="${count}"] { ${rule} }\n`
 
-        // Increase our count of matching tags by 1
-        count++
-
       } else {
 
         // Otherwise if tag fails tests, remove custom data attribute value

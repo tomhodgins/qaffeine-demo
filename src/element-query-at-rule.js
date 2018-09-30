@@ -99,9 +99,6 @@ module.exports = function(selector='', ...extra) {
           `${selector}[data-element-atRule-${attr}="${count}"]`
         )
 
-        // Increase our count of matching tags by 1
-        count++
-
       } else {
 
         // Otherwise if tag fails tests, remove custom data attribute value

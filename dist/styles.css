@@ -1,5 +1,5 @@
 body style { display: block; width: 100%; padding: 1em; margin: 1em 0px 2em; border-radius: 3px; font-size: 12pt; font-family: monospace; word-break: break-word; white-space: pre-wrap; font-kerning: auto; color: rgba(0, 0, 0, 0.7); background: transparent; border: 1px solid rgba(0, 0, 0, 0.3); }
-* { box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-kerning: auto; }
+* { box-sizing: border-box; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; font-kerning: auto; }
 body { margin: 1em; font-family: sans-serif; }
 [data-button] { display: block; margin: 1em 0px; }
 div { display: inline-block; border-radius: 0.2em; padding: 1.5em; color: rgb(85, 85, 85); font-size: 12pt; line-height: 1.4; background: rgb(238, 238, 238); border: 4px solid rgb(204, 204, 204); }
