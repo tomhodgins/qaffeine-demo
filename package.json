@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "qaffeine": "^0.4.0"
+    "qaffeine": "^0.6.0"
   }
 }

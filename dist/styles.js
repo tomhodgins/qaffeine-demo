@@ -1,6 +1,6 @@
 // jsincss
 const jsincss = function (
-  stylesheet = '',
+  stylesheet = () => '',
   selector = window,
   events = ['load', 'resize', 'input', 'click', 'reprocess']
 ) {
@@ -292,225 +292,225 @@ jsincss(() =>
   [
     customStyleRule.element(
       `.minwidth`,
-      {minWidth: 300}, 
+      {"minWidth": 300}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".minwidth", {minWidth: 300}, 
+      ".minwidth", {"minWidth": 300}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.maxwidth`,
-      {maxWidth: 300}, 
+      {"maxWidth": 300}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".maxwidth", {maxWidth: 300}, 
+      ".maxwidth", {"maxWidth": 300}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.minheight`,
-      {minHeight: 200}, 
+      {"minHeight": 200}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".minheight", {minHeight: 200}, 
+      ".minheight", {"minHeight": 200}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.maxheight`,
-      {maxHeight: 200}, 
+      {"maxHeight": 200}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".maxheight", {maxHeight: 200}, 
+      ".maxheight", {"maxHeight": 200}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.mincharacters`,
-      {minCharacters: 35}, 
+      {"minCharacters": 35}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".mincharacters", {minCharacters: 35}, 
+      ".mincharacters", {"minCharacters": 35}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.mincharacters-input`,
-      {minCharacters: 35}, 
+      {"minCharacters": 35}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".mincharacters-input", {minCharacters: 35}, 
+      ".mincharacters-input", {"minCharacters": 35}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.mincharacters-textarea`,
-      {minCharacters: 35}, 
+      {"minCharacters": 35}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".mincharacters-textarea", {minCharacters: 35}, 
+      ".mincharacters-textarea", {"minCharacters": 35}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.characters`,
-      {characters: 5}, 
+      {"characters": 5}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".characters", {characters: 5}, 
+      ".characters", {"characters": 5}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.characters-input`,
-      {characters: 5}, 
+      {"characters": 5}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".characters-input", {characters: 5}, 
+      ".characters-input", {"characters": 5}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.characters-textarea`,
-      {characters: 5}, 
+      {"characters": 5}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".characters-textarea", {characters: 5}, 
+      ".characters-textarea", {"characters": 5}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.maxcharacters`,
-      {maxCharacters: 35}, 
+      {"maxCharacters": 35}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".maxcharacters", {maxCharacters: 35}, 
+      ".maxcharacters", {"maxCharacters": 35}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.maxcharacters-input`,
-      {maxCharacters: 35}, 
+      {"maxCharacters": 35}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".maxcharacters-input", {maxCharacters: 35}, 
+      ".maxcharacters-input", {"maxCharacters": 35}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.maxcharacters-textarea`,
-      {maxCharacters: 35}, 
+      {"maxCharacters": 35}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".maxcharacters-textarea", {maxCharacters: 35}, 
+      ".maxcharacters-textarea", {"maxCharacters": 35}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.minchildren`,
-      {minChildren: 5}, 
+      {"minChildren": 5}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".minchildren", {minChildren: 5}, 
+      ".minchildren", {"minChildren": 5}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.children`,
-      {totalChildren: 5}, 
+      {"totalChildren": 5}, 
       `border-color: limegreen;`
     ),
     customStyleRule.element(
       `.maxchildren`,
-      {maxChildren: 5}, 
+      {"maxChildren": 5}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".maxchildren", {maxChildren: 5}, 
+      ".maxchildren", {"maxChildren": 5}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.square`,
-      {orientation: 'square'}, 
+      {"orientation": "square"}, 
       `border-color: darkorchid;`
     ),
     customAtRule.element(
-      ".square", {orientation: "square"}, 
+      ".square", {"orientation": "square"}, 
       `
         [--self] { background: orchid; }
       `
     ),
     customStyleRule.element(
       `.portrait`,
-      {orientation: 'portrait'}, 
+      {"orientation": "portrait"}, 
       `border-color: teal;`
     ),
     customAtRule.element(
-      ".portrait", {orientation: "portrait"}, 
+      ".portrait", {"orientation": "portrait"}, 
       `
         [--self] { background: darkturquoise; }
       `
     ),
     customStyleRule.element(
       `.landscape`,
-      {orientation: 'landscape'}, 
+      {"orientation": "landscape"}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".landscape", {orientation: "landscape"}, 
+      ".landscape", {"orientation": "landscape"}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.minaspectratio`,
-      {minAspectRatio: 16/9}, 
+      {"minAspectRatio": 1.777}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".minaspectratio", {minAspectRatio: 16/9}, 
+      ".minaspectratio", {"minAspectRatio": 1.777}, 
       `
         [--self] { background: greenyellow; }
       `
     ),
     customStyleRule.element(
       `.maxaspectratio`,
-      {maxAspectRatio: 16/9}, 
+      {"maxAspectRatio": 1.777}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".maxaspectratio", {maxAspectRatio: 16/9}, 
+      ".maxaspectratio", {"maxAspectRatio": 1.777}, 
       `
         [--self] { background: greenyellow; }
       `
@@ -521,7 +521,7 @@ jsincss(() =>
 // JS-powered rules with custom event listeners
 jsincss(() =>
   customAtRule.element(
-    ".children", {totalChildren: 5}, 
+    ".children", {"totalChildren": 5}, 
     `
       [--options] { --selector: window; --events: ["load", "resize", "input", "click", "mouseup"]; }
       [--self] { background: greenyellow; }
@@ -533,7 +533,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.min-scroll-y`,
-    {minScrollY: 50}, 
+    {"minScrollY": 50}, 
     `--selector: window; --events: ["load"]; border-color: limegreen;`
   ),
   window,
@@ -542,7 +542,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.min-scroll-y`,
-    {minScrollY: 50}, 
+    {"minScrollY": 50}, 
     `--selector: ".min-scroll-y"; --events: ["scroll"]; border-color: limegreen;`
   ),
   ".min-scroll-y",
@@ -550,7 +550,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".min-scroll-y", {minScrollY: 50}, 
+    ".min-scroll-y", {"minScrollY": 50}, 
     `
       [--options] { --selector: window; --events: ["load"]; }
       [--self] { background: greenyellow; }
@@ -561,7 +561,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".min-scroll-y", {minScrollY: 50}, 
+    ".min-scroll-y", {"minScrollY": 50}, 
     `
       [--options] { --selector: ".min-scroll-y"; --events: ["scroll"]; }
       [--self] { background: greenyellow; }
@@ -573,7 +573,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.max-scroll-y`,
-    {maxScrollY: 50}, 
+    {"maxScrollY": 50}, 
     `--selector: window; --events: ["load"]; border-color: limegreen;`
   ),
   window,
@@ -582,7 +582,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.max-scroll-y`,
-    {maxScrollY: 50}, 
+    {"maxScrollY": 50}, 
     `--selector: ".max-scroll-y"; --events: ["scroll"]; border-color: limegreen;`
   ),
   ".max-scroll-y",
@@ -590,7 +590,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".max-scroll-y", {maxScrollY: 50}, 
+    ".max-scroll-y", {"maxScrollY": 50}, 
     `
       [--options] { --selector: window; --events: ["load"]; }
       [--self] { background: greenyellow; }
@@ -601,7 +601,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".max-scroll-y", {maxScrollY: 50}, 
+    ".max-scroll-y", {"maxScrollY": 50}, 
     `
       [--options] { --selector: ".max-scroll-y"; --events: ["scroll"]; }
       [--self] { background: greenyellow; }
@@ -613,7 +613,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.min-scroll-x`,
-    {minScrollX: 50}, 
+    {"minScrollX": 50}, 
     `--selector: window; --events: ["load"]; border-color: limegreen;`
   ),
   window,
@@ -622,7 +622,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.min-scroll-x`,
-    {minScrollX: 50}, 
+    {"minScrollX": 50}, 
     `--selector: ".min-scroll-x"; --events: ["scroll"]; border-color: limegreen;`
   ),
   ".min-scroll-x",
@@ -630,7 +630,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".min-scroll-x", {minScrollX: 50}, 
+    ".min-scroll-x", {"minScrollX": 50}, 
     `
       [--options] { --selector: window; --events: ["load"]; }
       [--self] { background: greenyellow; }
@@ -641,7 +641,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".min-scroll-x", {minScrollX: 50}, 
+    ".min-scroll-x", {"minScrollX": 50}, 
     `
       [--options] { --selector: ".min-scroll-x"; --events: ["scroll"]; }
       [--self] { background: greenyellow; }
@@ -653,7 +653,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.max-scroll-x`,
-    {maxScrollX: 50}, 
+    {"maxScrollX": 50}, 
     `--selector: window; --events: ["load"]; border-color: limegreen;`
   ),
   window,
@@ -662,7 +662,7 @@ jsincss(() =>
 jsincss(() =>
   customStyleRule.element(
     `.max-scroll-x`,
-    {maxScrollX: 50}, 
+    {"maxScrollX": 50}, 
     `--selector: ".max-scroll-x"; --events: ["scroll"]; border-color: limegreen;`
   ),
   ".max-scroll-x",
@@ -670,7 +670,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".max-scroll-x", {maxScrollX: 50}, 
+    ".max-scroll-x", {"maxScrollX": 50}, 
     `
       [--options] { --selector: window; --events: ["load"]; }
       [--self] { background: greenyellow; }
@@ -681,7 +681,7 @@ jsincss(() =>
 )
 jsincss(() =>
   customAtRule.element(
-    ".max-scroll-x", {maxScrollX: 50}, 
+    ".max-scroll-x", {"maxScrollX": 50}, 
     `
       [--options] { --selector: ".max-scroll-x"; --events: ["scroll"]; }
       [--self] { background: greenyellow; }
