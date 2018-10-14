@@ -7,9 +7,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
+  "description": "A Demo site of Qaffeine",
   "dependencies": {
-    "qaffeine": "^0.6.0"
+    "qaffeine": "^0.7.0"
   }
 }

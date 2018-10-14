@@ -111,7 +111,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".minwidth", {"minWidth": 300}) {
+@supports (--element(".minwidth", {"minWidth": 300})) {
   [--self] {
     background: greenyellow;
   }
@@ -122,7 +122,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".maxwidth", {"maxWidth": 300}) {
+@supports (--element(".maxwidth", {"maxWidth": 300})) {
   [--self] {
     background: greenyellow;
   }
@@ -133,7 +133,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".minheight", {"minHeight": 200}) {
+@supports (--element(".minheight", {"minHeight": 200})) {
   [--self] {
     background: greenyellow;
   }
@@ -144,7 +144,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".maxheight", {"maxHeight": 200}) {
+@supports (--element(".maxheight", {"maxHeight": 200})) {
   [--self] {
     background: greenyellow;
   }
@@ -155,7 +155,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".mincharacters", {"minCharacters": 35}) {
+@supports (--element(".mincharacters", {"minCharacters": 35})) {
   [--self] {
     background: greenyellow;
   }
@@ -166,7 +166,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".mincharacters-input", {"minCharacters": 35}) {
+@supports (--element(".mincharacters-input", {"minCharacters": 35})) {
   [--self] {
     background: greenyellow;
   }
@@ -177,7 +177,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".mincharacters-textarea", {"minCharacters": 35}) {
+@supports (--element(".mincharacters-textarea", {"minCharacters": 35})) {
   [--self] {
     background: greenyellow;
   }
@@ -188,7 +188,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".characters", {"characters": 5}) {
+@supports (--element(".characters", {"characters": 5})) {
   [--self] {
     background: greenyellow;
   }
@@ -199,7 +199,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".characters-input", {"characters": 5}) {
+@supports (--element(".characters-input", {"characters": 5})) {
   [--self] {
     background: greenyellow;
   }
@@ -210,7 +210,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".characters-textarea", {"characters": 5}) {
+@supports (--element(".characters-textarea", {"characters": 5})) {
   [--self] {
     background: greenyellow;
   }
@@ -221,7 +221,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".maxcharacters", {"maxCharacters": 35}) {
+@supports (--element(".maxcharacters", {"maxCharacters": 35})) {
   [--self] {
     background: greenyellow;
   }
@@ -232,7 +232,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".maxcharacters-input", {"maxCharacters": 35}) {
+@supports (--element(".maxcharacters-input", {"maxCharacters": 35})) {
   [--self] {
     background: greenyellow;
   }
@@ -243,7 +243,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".maxcharacters-textarea", {"maxCharacters": 35}) {
+@supports (--element(".maxcharacters-textarea", {"maxCharacters": 35})) {
   [--self] {
     background: greenyellow;
   }
@@ -254,7 +254,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".minchildren", {"minChildren": 5}) {
+@supports (--element(".minchildren", {"minChildren": 5})) {
   [--self] {
     background: greenyellow;
   }
@@ -265,7 +265,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".children", {"totalChildren": 5}) {
+@supports (--element(".children", {"totalChildren": 5})) {
   [--options] {
     --selector: window;
     --events: ['load', 'resize', 'input', 'click', 'mouseup'];
@@ -280,7 +280,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".maxchildren", {"maxChildren": 5}) {
+@supports (--element(".maxchildren", {"maxChildren": 5})) {
   [--self] {
     background: greenyellow;
   }
@@ -299,7 +299,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".min-scroll-y", {"minScrollY": 50}) {
+@supports (--element(".min-scroll-y", {"minScrollY": 50})) {
   [--options]{
     --selector: window;
     --events: ['load'];
@@ -309,7 +309,7 @@ p {
   }
 }
 
-@supports --element(".min-scroll-y", {"minScrollY": 50}) {
+@supports (--element(".min-scroll-y", {"minScrollY": 50})) {
   [--options] {
     --selector: '.min-scroll-y';
     --events: ['scroll'];
@@ -332,7 +332,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".max-scroll-y", {"maxScrollY": 50}) {
+@supports (--element(".max-scroll-y", {"maxScrollY": 50})) {
   [--options] {
     --selector: window;
     --events: ['load'];
@@ -342,7 +342,7 @@ p {
   }
 }
 
-@supports --element(".max-scroll-y", {"maxScrollY": 50}) {
+@supports (--element(".max-scroll-y", {"maxScrollY": 50})) {
   [--options] {
     --selector: '.max-scroll-y';
     --events: ['scroll'];
@@ -365,7 +365,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".min-scroll-x", {"minScrollX": 50}) {
+@supports (--element(".min-scroll-x", {"minScrollX": 50})) {
   [--options] {
     --selector: window;
     --events: ['load'];
@@ -375,7 +375,7 @@ p {
   }
 }
 
-@supports --element(".min-scroll-x", {"minScrollX": 50}) {
+@supports (--element(".min-scroll-x", {"minScrollX": 50})) {
   [--options] {
     --selector: '.min-scroll-x';
     --events: ['scroll'];
@@ -398,7 +398,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".max-scroll-x", {"maxScrollX": 50}) {
+@supports (--element(".max-scroll-x", {"maxScrollX": 50})) {
   [--options] {
     --selector: window;
     --events: ['load'];
@@ -408,7 +408,7 @@ p {
   }
 }
 
-@supports --element(".max-scroll-x", {"maxScrollX": 50}) {
+@supports (--element(".max-scroll-x", {"maxScrollX": 50})) {
   [--options] {
     --selector: '.max-scroll-x';
     --events: ['scroll'];
@@ -423,7 +423,7 @@ p {
   border-color: darkorchid;
 }
 
-@supports --element(".square", {"orientation": "square"}) {
+@supports (--element(".square", {"orientation": "square"})) {
   [--self] {
     background: orchid;
   }
@@ -434,7 +434,7 @@ p {
   border-color: teal;
 }
 
-@supports --element(".portrait", {"orientation": "portrait"}) {
+@supports (--element(".portrait", {"orientation": "portrait"})) {
   [--self] {
     background: darkturquoise;
   }
@@ -445,7 +445,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".landscape", {"orientation": "landscape"}) {
+@supports (--element(".landscape", {"orientation": "landscape"})) {
   [--self] {
     background: greenyellow;
   }
@@ -456,7 +456,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".minaspectratio", {"minAspectRatio": 1.777}) {
+@supports (--element(".minaspectratio", {"minAspectRatio": 1.777})) {
   [--self] {
     background: greenyellow;
   }
@@ -467,7 +467,7 @@ p {
   border-color: limegreen;
 }
 
-@supports --element(".maxaspectratio", {"maxAspectRatio": 1.777}) {
+@supports (--element(".maxaspectratio", {"maxAspectRatio": 1.777})) {
   [--self] {
     background: greenyellow;
   }
