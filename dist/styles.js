@@ -121,14 +121,14 @@ customAtRule.element = function (selector='', ...extra) {
 
   }
 
+  // Create a custom data attribute we can assign if the tag matches
+  const attr = (selector + Object.entries(options)).replace(/\W/g, '')
+
   // For each tag in the document matching the CSS selector
-  return Array.from(document.querySelectorAll(selector))
+  const result = Array.from(document.querySelectorAll(selector))
 
     // Process each tag and return a string of CSS that tag needs
-    .reduce((styles, tag, count) => {
-
-      // Create a custom data atribute we can assign if the tag matches
-      const attr = (selector + Object.entries(options)).replace(/\W/g, '')
+    .reduce((output, tag, count) => {
 
       // Test tag to see if it passes all conditions
       if (
@@ -153,24 +153,36 @@ customAtRule.element = function (selector='', ...extra) {
       ) {
 
         // If the tag passes, set a custom data attribute
-        tag.setAttribute(`data-element-atRule-${attr}`, count)
+        output.add.push({tag: tag, count: count})
 
         // Add CSS stylesheet to output, replacing [--self] with the current tag
-        styles += stylesheet.replace(
-          /:self|\$this|\[--self\]/g,
-          `${selector}[data-element-atRule-${attr}="${count}"]`
+        output.styles.push(
+          stylesheet.replace(
+            /:self|\$this|\[--self\]/g,
+            `${selector}[data-element-atRule-${attr}="${count}"]`
+          )
         )
 
       } else {
 
         // Otherwise if tag fails tests, remove custom data attribute value
-        tag.setAttribute(`data-element-atRule-${attr}`, '')
+        output.remove.push(tag)
 
       }
 
-      return styles
+      return output
 
-    }, '')
+    }, {styles: [], add: [], remove: []})
+
+    result.add.forEach(
+      tag => tag.tag.setAttribute(`data-element-atRule-${attr}`, tag.count)
+    )
+
+    result.remove.forEach(
+      tag => tag.setAttribute(`data-element-atRule-${attr}`, '')
+    )
+
+    return result.styles.join('\n')
 
 }
 
@@ -237,14 +249,14 @@ customStyleRule.element = function (selector='', ...extra) {
 
   }
 
+  // Create a custom data attribute we can assign if the tag matches
+  const attr = (selector + Object.entries(options)).replace(/\W/g, '')
+
   // For each tag in the document matching the CSS selector
-  return Array.from(document.querySelectorAll(selector))
+  const result = Array.from(document.querySelectorAll(selector))
 
     // Process each tag and return a string of CSS that tag needs
-    .reduce((styles, tag, count) => {
-
-      // Create a custom data atribute we can assign if the tag matches
-      const attr = (selector + Object.entries(options)).replace(/\W/g, '')
+    .reduce((output, tag, count) => {
 
       // Test tag to see if it passes all conditions
       if (
@@ -269,21 +281,31 @@ customStyleRule.element = function (selector='', ...extra) {
       ) {
 
         // If the tag passes, set a custom data attribute
-        tag.setAttribute(`data-element-selector-${attr}`, count)
+        output.add.push({tag: tag, count: count})
 
         // Add CSS rule to output, adding selector for the current tag
-        styles += `${selector}[data-element-selector-${attr}="${count}"] { ${rule} }\n`
+        output.styles.push(`${selector}[data-element-selector-${attr}="${count}"] { ${rule} }`)
 
       } else {
 
         // Otherwise if tag fails tests, remove custom data attribute value
-        tag.setAttribute(`data-element-selector-${attr}`, '')
+        output.remove.push(tag)
 
       }
 
-      return styles
+      return output
 
-    }, '')
+    }, {styles: [], add: [], remove: []})
+
+    result.add.forEach(
+      tag => tag.tag.setAttribute(`data-element-selector-${attr}`, tag.count)
+    )
+
+    result.remove.forEach(
+        tag => tag.setAttribute(`data-element-selector-${attr}`, '')
+    )
+
+    return result.styles.join('\n')
 
 }
 
