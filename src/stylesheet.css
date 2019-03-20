@@ -268,7 +268,7 @@ p {
 @supports (--element(".children", {"totalChildren": 5})) {
   [--options] {
     --selector: window;
-    --events: ['load', 'resize', 'input', 'click', 'mouseup'];
+    --events: ["load", "resize", "input", "click", "mouseup"];
   }
   [--self] {
     background: greenyellow;
@@ -289,20 +289,20 @@ p {
 /* Min-scroll-y */
 .min-scroll-y[--element='{"minScrollY": 50}'] {
   --selector: window;
-  --events: ['load'];
+  --events: ["load"];
   border-color: limegreen;
 }
 
 .min-scroll-y[--element='{"minScrollY": 50}'] {
-  --selector: '.min-scroll-y';
-  --events: ['scroll'];
+  --selector: ".min-scroll-y";
+  --events: ["scroll"];
   border-color: limegreen;
 }
 
 @supports (--element(".min-scroll-y", {"minScrollY": 50})) {
   [--options]{
     --selector: window;
-    --events: ['load'];
+    --events: ["load"];
   }
   [--self] {
     background: greenyellow;
@@ -311,8 +311,8 @@ p {
 
 @supports (--element(".min-scroll-y", {"minScrollY": 50})) {
   [--options] {
-    --selector: '.min-scroll-y';
-    --events: ['scroll'];
+    --selector: ".min-scroll-y";
+    --events: ["scroll"];
   }
   [--self] {
     background: greenyellow;
@@ -322,20 +322,20 @@ p {
 /* Max-scroll-y */
 .max-scroll-y[--element='{"maxScrollY": 50}'] {
   --selector: window;
-  --events: ['load'];
+  --events: ["load"];
   border-color: limegreen;
 }
 
 .max-scroll-y[--element='{"maxScrollY": 50}'] {
-  --selector: '.max-scroll-y';
-  --events: ['scroll'];
+  --selector: ".max-scroll-y";
+  --events: ["scroll"];
   border-color: limegreen;
 }
 
 @supports (--element(".max-scroll-y", {"maxScrollY": 50})) {
   [--options] {
     --selector: window;
-    --events: ['load'];
+    --events: ["load"];
   }
   [--self] {
     background: greenyellow;
@@ -344,8 +344,8 @@ p {
 
 @supports (--element(".max-scroll-y", {"maxScrollY": 50})) {
   [--options] {
-    --selector: '.max-scroll-y';
-    --events: ['scroll'];
+    --selector: ".max-scroll-y";
+    --events: ["scroll"];
   }
   [--self] {
     background: greenyellow;
@@ -355,20 +355,20 @@ p {
 /* Min-scroll-x */
 .min-scroll-x[--element='{"minScrollX": 50}'] {
   --selector: window;
-  --events: ['load'];
+  --events: ["load"];
   border-color: limegreen;
 }
 
 .min-scroll-x[--element='{"minScrollX": 50}'] {
-  --selector: '.min-scroll-x';
-  --events: ['scroll'];
+  --selector: ".min-scroll-x";
+  --events: ["scroll"];
   border-color: limegreen;
 }
 
 @supports (--element(".min-scroll-x", {"minScrollX": 50})) {
   [--options] {
     --selector: window;
-    --events: ['load'];
+    --events: ["load"];
   }
   [--self] {
     background: greenyellow;
@@ -377,8 +377,8 @@ p {
 
 @supports (--element(".min-scroll-x", {"minScrollX": 50})) {
   [--options] {
-    --selector: '.min-scroll-x';
-    --events: ['scroll'];
+    --selector: ".min-scroll-x";
+    --events: ["scroll"];
   }
   [--self] {
     background: greenyellow;
@@ -388,20 +388,20 @@ p {
 /* Max-scroll-x */
 .max-scroll-x[--element='{"maxScrollX": 50}'] {
   --selector: window;
-  --events: ['load'];
+  --events: ["load"];
   border-color: limegreen;
 }
 
 .max-scroll-x[--element='{"maxScrollX": 50}'] {
-  --selector: '.max-scroll-x';
-  --events: ['scroll'];
+  --selector: ".max-scroll-x";
+  --events: ["scroll"];
   border-color: limegreen;
 }
 
 @supports (--element(".max-scroll-x", {"maxScrollX": 50})) {
   [--options] {
     --selector: window;
-    --events: ['load'];
+    --events: ["load"];
   }
   [--self] {
     background: greenyellow;
@@ -410,8 +410,8 @@ p {
 
 @supports (--element(".max-scroll-x", {"maxScrollX": 50})) {
   [--options] {
-    --selector: '.max-scroll-x';
-    --events: ['scroll'];
+    --selector: ".max-scroll-x";
+    --events: ["scroll"];
   }
   [--self] {
     background: greenyellow;

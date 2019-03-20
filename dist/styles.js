@@ -1,6 +1,6 @@
 // jsincss
-const jsincss = function (
-  stylesheet = () => '',
+const jsincss = function(
+  stylesheet = event => '',
   selector = window,
   events = ['load', 'resize', 'input', 'click', 'reprocess']
 ) {
@@ -9,12 +9,12 @@ const jsincss = function (
 
     return target.addEventListener(
       event,
-      e => populateStylesheet(id, stylesheet)
+      e => populateStylesheet(id, stylesheet, e)
     )
 
   }
 
-  function populateStylesheet(id, stylesheet) {
+  function populateStylesheet(id, stylesheet, e) {
 
     let tag = document.querySelector(`#jsincss-${id}`)
 
@@ -27,7 +27,7 @@ const jsincss = function (
     }
 
     const currentStyles = tag.textContent
-    const generatedStyles = stylesheet()
+    const generatedStyles = stylesheet(e)
 
     if (!currentStyles || (generatedStyles !== currentStyles)) {
 
@@ -60,7 +60,7 @@ const jsincss = function (
 // jsincss plugins
 const customAtRule = {}
 
-customAtRule.element = function (selector='', ...extra) {
+customAtRule.element = function(selector='', ...extra) {
 
   // Built-in element query tests
   const eq = {
@@ -188,7 +188,7 @@ customAtRule.element = function (selector='', ...extra) {
 
 const customStyleRule = {}
 
-customStyleRule.element = function (selector='', ...extra) {
+customStyleRule.element = function(selector='', ...extra) {
 
   // Built-in element query tests
   const eq = {
@@ -310,7 +310,7 @@ customStyleRule.element = function (selector='', ...extra) {
 }
 
 // JS-powered rules with default event listeners
-jsincss(() =>
+jsincss(event =>
   [
     customStyleRule.element(
       `.minwidth`,
@@ -541,7 +541,7 @@ jsincss(() =>
 )
 
 // JS-powered rules with custom event listeners
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".children", {"totalChildren": 5}, 
     `
@@ -552,7 +552,7 @@ jsincss(() =>
   window,
   ["load", "resize", "input", "click", "mouseup"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.min-scroll-y`,
     {"minScrollY": 50}, 
@@ -561,7 +561,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.min-scroll-y`,
     {"minScrollY": 50}, 
@@ -570,7 +570,7 @@ jsincss(() =>
   ".min-scroll-y",
   ["scroll"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".min-scroll-y", {"minScrollY": 50}, 
     `
@@ -581,7 +581,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".min-scroll-y", {"minScrollY": 50}, 
     `
@@ -592,7 +592,7 @@ jsincss(() =>
   ".min-scroll-y",
   ["scroll"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.max-scroll-y`,
     {"maxScrollY": 50}, 
@@ -601,7 +601,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.max-scroll-y`,
     {"maxScrollY": 50}, 
@@ -610,7 +610,7 @@ jsincss(() =>
   ".max-scroll-y",
   ["scroll"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".max-scroll-y", {"maxScrollY": 50}, 
     `
@@ -621,7 +621,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".max-scroll-y", {"maxScrollY": 50}, 
     `
@@ -632,7 +632,7 @@ jsincss(() =>
   ".max-scroll-y",
   ["scroll"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.min-scroll-x`,
     {"minScrollX": 50}, 
@@ -641,7 +641,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.min-scroll-x`,
     {"minScrollX": 50}, 
@@ -650,7 +650,7 @@ jsincss(() =>
   ".min-scroll-x",
   ["scroll"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".min-scroll-x", {"minScrollX": 50}, 
     `
@@ -661,7 +661,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".min-scroll-x", {"minScrollX": 50}, 
     `
@@ -672,7 +672,7 @@ jsincss(() =>
   ".min-scroll-x",
   ["scroll"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.max-scroll-x`,
     {"maxScrollX": 50}, 
@@ -681,7 +681,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customStyleRule.element(
     `.max-scroll-x`,
     {"maxScrollX": 50}, 
@@ -690,7 +690,7 @@ jsincss(() =>
   ".max-scroll-x",
   ["scroll"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".max-scroll-x", {"maxScrollX": 50}, 
     `
@@ -701,7 +701,7 @@ jsincss(() =>
   window,
   ["load"]
 )
-jsincss(() =>
+jsincss(event =>
   customAtRule.element(
     ".max-scroll-x", {"maxScrollX": 50}, 
     `

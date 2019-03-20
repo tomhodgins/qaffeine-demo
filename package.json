@@ -10,6 +10,6 @@
   "license": "MIT",
   "description": "A Demo site of Qaffeine",
   "dependencies": {
-    "qaffeine": "^0.7.0"
+    "qaffeine": "^0.9.1"
   }
 }
