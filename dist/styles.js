@@ -69,30 +69,22 @@ customAtRule.element = function(selector='', ...extra) {
     minHeight: (el, number) => number <= el.offsetHeight,
     maxHeight: (el, number) => number >= el.offsetHeight,
     minChildren: (el, number) => number <= el.children.length,
-    totalChildren: (el, number) => number === el.children.length,
+    children: (el, number) => number === el.children.length,
     maxChildren: (el, number) => number >= el.children.length,
-    minCharacters: (el, number) => number <= (
-      (el.value && el.value.length) || el.textContent.length
-    ),
-    characters: (el, number) => number === (
-      (el.value && el.value.length) || el.textContent.length
-    ),
-    maxCharacters: (el, number) => number >= (
-      (el.value && el.value.length) || el.textContent.length
-    ),
+    minCharacters: (el, number) => number <= (el.value ? el.value.length : el.textContent.length),
+    characters: (el, number) => number === (el.value ? el.value.length : el.textContent.length),
+    maxCharacters: (el, number) => number >= (el.value ? el.value.length : el.textContent.length),
     minScrollX: (el, number) => number <= el.scrollLeft,
     maxScrollX: (el, number) => number >= el.scrollLeft,
     minScrollY: (el, number) => number <= el.scrollTop,
     maxScrollY: (el, number) => number >= el.scrollTop,
     minAspectRatio: (el, number) => number <= el.offsetWidth / el.offsetHeight,
     maxAspectRatio: (el, number) => number >= el.offsetWidth / el.offsetHeight,
-    orientation: (el, string) => {
-      switch (string) {
-        case 'portrait': return el.offsetWidth < el.offsetHeight
-        case 'square': return el.offsetWidth === el.offsetHeight
-        case 'landscape': return el.offsetWidth > el.offsetHeight
-      }
-    }
+    orientation: (el, string) => ({
+      portrait: el => el.offsetWidth < el.offsetHeight,
+      square: el => el.offsetWidth === el.offsetHeight,
+      landscape: el => el.offsetHeight < el.offsetWidth
+    })[string](el)
   }
 
   let options = {}
@@ -197,30 +189,22 @@ customStyleRule.element = function(selector='', ...extra) {
     minHeight: (el, number) => number <= el.offsetHeight,
     maxHeight: (el, number) => number >= el.offsetHeight,
     minChildren: (el, number) => number <= el.children.length,
-    totalChildren: (el, number) => number === el.children.length,
+    children: (el, number) => number === el.children.length,
     maxChildren: (el, number) => number >= el.children.length,
-    minCharacters: (el, number) => number <= (
-      (el.value && el.value.length) || el.textContent.length
-    ),
-    characters: (el, number) => number === (
-      (el.value && el.value.length) || el.textContent.length
-    ),
-    maxCharacters: (el, number) => number >= (
-      (el.value && el.value.length) || el.textContent.length
-    ),
+    minCharacters: (el, number) => number <= (el.value ? el.value.length : el.textContent.length),
+    characters: (el, number) => number === (el.value ? el.value.length : el.textContent.length),
+    maxCharacters: (el, number) => number >= (el.value ? el.value.length : el.textContent.length),
     minScrollX: (el, number) => number <= el.scrollLeft,
     maxScrollX: (el, number) => number >= el.scrollLeft,
     minScrollY: (el, number) => number <= el.scrollTop,
     maxScrollY: (el, number) => number >= el.scrollTop,
     minAspectRatio: (el, number) => number <= el.offsetWidth / el.offsetHeight,
     maxAspectRatio: (el, number) => number >= el.offsetWidth / el.offsetHeight,
-    orientation: (el, string) => {
-      switch (string) {
-        case 'portrait': return el.offsetWidth < el.offsetHeight
-        case 'square': return el.offsetWidth === el.offsetHeight
-        case 'landscape': return el.offsetWidth > el.offsetHeight
-      }
-    }
+    orientation: (el, string) => ({
+      portrait: el => el.offsetWidth < el.offsetHeight,
+      square: el => el.offsetWidth === el.offsetHeight,
+      landscape: el => el.offsetHeight < el.offsetWidth
+    })[string](el)
   }
 
   let options = {}
@@ -483,34 +467,34 @@ jsincss(event =>
       `
     ),
     customStyleRule.element(
-      `.square`,
+      `.orientation`,
       {"orientation": "square"}, 
       `border-color: darkorchid;`
     ),
     customAtRule.element(
-      ".square", {"orientation": "square"}, 
+      ".orientation", {"orientation": "square"}, 
       `
         [--self] { background: orchid; }
       `
     ),
     customStyleRule.element(
-      `.portrait`,
+      `.orientation`,
       {"orientation": "portrait"}, 
       `border-color: teal;`
     ),
     customAtRule.element(
-      ".portrait", {"orientation": "portrait"}, 
+      ".orientation", {"orientation": "portrait"}, 
       `
         [--self] { background: darkturquoise; }
       `
     ),
     customStyleRule.element(
-      `.landscape`,
+      `.orientation`,
       {"orientation": "landscape"}, 
       `border-color: limegreen;`
     ),
     customAtRule.element(
-      ".landscape", {"orientation": "landscape"}, 
+      ".orientation", {"orientation": "landscape"}, 
       `
         [--self] { background: greenyellow; }
       `

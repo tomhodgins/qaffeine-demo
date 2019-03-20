@@ -419,33 +419,33 @@ p {
 }
 
 /* Square Orientation */
-.square[--element='{"orientation": "square"}'] {
+.orientation[--element='{"orientation": "square"}'] {
   border-color: darkorchid;
 }
 
-@supports (--element(".square", {"orientation": "square"})) {
+@supports (--element(".orientation", {"orientation": "square"})) {
   [--self] {
     background: orchid;
   }
 }
 
 /* Portrait Orientation */
-.portrait[--element='{"orientation": "portrait"}'] {
+.orientation[--element='{"orientation": "portrait"}'] {
   border-color: teal;
 }
 
-@supports (--element(".portrait", {"orientation": "portrait"})) {
+@supports (--element(".orientation", {"orientation": "portrait"})) {
   [--self] {
     background: darkturquoise;
   }
 }
 
 /* Landscape Orientation */
-.landscape[--element='{"orientation": "landscape"}'] {
+.orientation[--element='{"orientation": "landscape"}'] {
   border-color: limegreen;
 }
 
-@supports (--element(".landscape", {"orientation": "landscape"})) {
+@supports (--element(".orientation", {"orientation": "landscape"})) {
   [--self] {
     background: greenyellow;
   }
